@@ -25,7 +25,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/usr/bin/xvfb-run",
-        "UpdateSourceArgs": "-a wine {{$FullRootDir}}vc_redist.x64.exe /install /quiet /norestart",
+        "UpdateSourceArgs": "-a /bin/bash -c \"WINEPREFIX={{$FullRootDir}}.wine WINEARCH=win64 wine {{$FullRootDir}}vc_redist.x64.exe /install /quiet /norestart\"",
         "SkipOnFailure": true
     }
 ]
