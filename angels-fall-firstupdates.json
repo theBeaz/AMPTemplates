@@ -11,11 +11,21 @@
         "OneShot": false
     },
     {
+        "UpdateStageName": "Download VC++ Redist",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://aka.ms/vs/17/release/vc_redist.x64.exe",
+        "UpdateSourceArgs": "vc_redist.x64.exe",
+        "UpdateSourceTarget": "{{$FullRootDir}}",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Install VC++ Redist",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/usr/bin/xvfb-run",
-        "UpdateSourceArgs": "-a /bin/bash -c \"WINEPREFIX={{$FullRootDir}}.wine winetricks -q vcrun2022\"",
+        "UpdateSourceArgs": "-a wine {{$FullRootDir}}vc_redist.x64.exe /install /quiet /norestart",
         "SkipOnFailure": true
     }
 ]
