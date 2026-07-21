@@ -14,8 +14,8 @@
         "UpdateStageName": "Install VC++ Redist",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"WINEPREFIX={{$FullRootDir}}.wine winetricks -q vcrun2022\"",
+        "UpdateSourceData": "/usr/bin/xvfb-run",
+        "UpdateSourceArgs": "-a /bin/bash -c \"WINEPREFIX={{$FullRootDir}}.wine winetricks -q vcrun2022\"",
         "SkipOnFailure": true
     }
 ]
