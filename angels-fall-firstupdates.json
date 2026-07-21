@@ -1,7 +1,7 @@
 [
     {
         "UpdateStageName": "App Download",
-        "UpdateSourcePlatform": "Windows",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "407480",
         "UnzipUpdateSource": false,
